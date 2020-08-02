@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import theme from '../components/theme'
+import theme from '../theme'
 import Selector from './selector'
 import Button from './button'
 
@@ -32,7 +32,9 @@ export default function SearchBox(props) {
 							}}
 							options={exams}
 						/>
-						<Button>add</Button>
+						<div className="btn">
+						  <Button>add</Button>
+            </div>
 					</div>
 				</div>
 				<div className="part">
@@ -44,7 +46,9 @@ export default function SearchBox(props) {
 							}}
 							options={ordering}
 						/>
-						<Button>buscar</Button>
+            <div className="btn">
+						  <Button height="100%">buscar</Button>
+            </div>
 					</div>
 				</div>
 			</div>
@@ -63,16 +67,16 @@ export default function SearchBox(props) {
           border-radius: 10px;
           background-color: #28C5CE;
           padding: 10px 20px 20px;
+          width: 100%;
+          text-align: left;
         }
 
         .part {
           margin: 10px 0px;
         }
 
-        button {
-          border-radius: 5px;
-          background-color: ${theme.colors.buttonBgColor}
-          color: ${theme.colors.buttonColor}
+        .btn {
+          margin: 0px 0px 0px 10px;
         }
       `}</style>
 		</>

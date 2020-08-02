@@ -1,4 +1,4 @@
-import globalTheme from './theme'
+import globalTheme from '../theme'
 
 /**
  *
@@ -14,11 +14,13 @@ export default function Button(props) {
         button {
           background-color: ${theme.colors.buttonBgColor};
           color: ${theme.colors.buttonColor};
-          padding: 10px 20px;
+          padding: 11px 20px;
           border: none;
           border-radius: 9px;
-          margin: 0px 5px;
           font-weight: bold;
+          width: ${props.width};
+          height: ${props.height};
+          cursor: pointer;
         }
       `}</style>
 		</button>
