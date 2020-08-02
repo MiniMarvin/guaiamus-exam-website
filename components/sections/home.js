@@ -29,7 +29,7 @@ export default function Home() {
 					<div className="bottomDiv"></div>
 				</div>
 				<div className="image">
-					<img src="/home-art.svg" alt="logo guaiamus" />
+					<img src="/home-art.svg" alt="" />
 				</div>
 			</section>
 

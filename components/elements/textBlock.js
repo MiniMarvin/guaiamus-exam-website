@@ -2,7 +2,7 @@ export default function TextBlock(props) {
 	return (
 		<>
 			<div className="main">
-				<img src={props.img} />
+				<img src={props.img} alt={props.alt}/>
 				<div className="content">{props.children}</div>
 			</div>
 

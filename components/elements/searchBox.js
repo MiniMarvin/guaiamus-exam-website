@@ -24,13 +24,14 @@ export default function SearchBox(props) {
 		<>
 			<div className="box">
 				<div className="part">
-					<h4>escolha seus exames</h4>
+					<p>escolha seus exames</p>
 					<div className="row">
 						<Selector
 							onChange={(value) => {
 								console.log(`did select ${value}`)
 							}}
 							options={exams}
+							label="escolha seus exames"
 						/>
 						<div className="btn">
 						  <Button>add</Button>
@@ -38,13 +39,14 @@ export default function SearchBox(props) {
 					</div>
 				</div>
 				<div className="part">
-					<h4>ordenar por</h4>
+					<p>ordenar por</p>
 					<div className="row">
 						<Selector
 							onChange={(value) => {
 								console.log(`did select ${value}`)
 							}}
 							options={ordering}
+							label="escolha o método de ordenação"
 						/>
             <div className="btn">
 						  <Button height="100%">buscar</Button>
@@ -54,9 +56,11 @@ export default function SearchBox(props) {
 			</div>
 
 			<style jsx>{`
-        h1,h2,h3,h4,h5 {
-          margin: 5px 0px;
-        }
+				p {
+					margin: 10px 0px;
+					font-size: 1.1em;
+					color: #111;
+				}
 
         .row {
           display: flex;
