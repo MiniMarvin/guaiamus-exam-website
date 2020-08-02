@@ -20,19 +20,16 @@ export default function Home() {
 					<div className="content">
 						<h1>agende seus exames em um clique</h1>
 						<p>
-							<Anchor src="#">se inscreva</Anchor> para poder acompanhar exames
-							e fazer exames gratuitos
+							<Anchor src="#">se inscreva</Anchor> para poder
+							acompanhar as novidades da guaiamus, notícias sobre
+							saúde e fazer exames gratuitos
 						</p>
 					</div>
 					<SearchBox />
 					<div className="bottomDiv"></div>
 				</div>
 				<div className="image">
-					<div className="top">
-						<Link href="#">
-							<img src="/logo_guaiamus.svg" alt="logo guaiamus" />
-						</Link>
-					</div>
+					<img src="/home-art.svg" alt="logo guaiamus" />
 				</div>
 			</section>
 
@@ -51,6 +48,15 @@ export default function Home() {
 					padding: ${theme.constants.sectionPadding};
 					display: flex;
 					flex-direction: row;
+					flex-basis: 0px;
+					overflow: hidden;
+				}
+
+				.content h1 {
+					margin: 40px 0px;
+				}
+				p {
+					margin-bottom: 60px;
 				}
 
 				.bottomDiv {
@@ -89,6 +95,19 @@ export default function Home() {
 					align-items: left;
 				}
 
+				.image {
+					width: 100%;
+					display: flex;
+					align-items: right;
+					padding: 0px 0px 0px 100px;
+				}
+
+				.image img {
+					width: 100%;
+					max-height: 650px;
+					margin: 0px;
+				}
+
 				@media (max-width: 714px) {
 					.image {
 						display: none;
@@ -97,6 +116,12 @@ export default function Home() {
 					.info {
 						align-items: center;
 						text-align: center;
+					}
+				}
+
+				@media (min-width: 714px) {
+					.info {
+						margin-left: 50px;
 					}
 				}
 			`}</style>

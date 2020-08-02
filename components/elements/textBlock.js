@@ -3,7 +3,7 @@ export default function TextBlock(props) {
 		<>
 			<div className="main">
 				<img src={props.img} />
-				<div class="content">{props.children}</div>
+				<div className="content">{props.children}</div>
 			</div>
 
 			<style jsx>{`
