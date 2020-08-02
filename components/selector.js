@@ -13,12 +13,16 @@ export default function Selector(props) {
 				onChange={props.onChange}
 				{...props}
 			>
+        <option>escolha uma opção...</option>
 				{options}
 			</select>
 
 			<style jsx>{`
 				select {
 					width: 100%;
+          padding: 10px 5px;
+          border-radius: 9px;
+          border: none;
 				}
 			`}</style>
 		</>
