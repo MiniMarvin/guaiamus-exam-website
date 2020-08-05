@@ -3,6 +3,7 @@ import theme from '../theme'
 import Selector from '../elements/selector'
 import Button from '../elements/button'
 import TopImage from '../elements/topImage'
+import Tag from '../elements/tag'
 
 export default function SearchBox(props) {
 	// TODO: query data from database
@@ -21,8 +22,23 @@ export default function SearchBox(props) {
 		'agilidade',
 	])
 
+	const [selectedItems, setSelectedItems] = useState([
+		'titulo 1',
+		'titulo 2',
+		'titulo 3',
+	])
+
 	const imageAsset = '/hide.svg'
 	const toggle = () => {}
+	const tags = selectedItems.map((item, id) => (
+		<Tag
+			title={item}
+			key={id+'-tag'}
+			action={() => {
+				console.log(`click ${item}`)
+			}}
+		/>
+	))
 
 	return (
 		<>
@@ -61,7 +77,9 @@ export default function SearchBox(props) {
 					</div>
 				</div>
 				{/* TODO: insert here the selected and selectable items */}
-				<div class="selected-items"></div>
+				<div class="selected-items">
+					{tags}
+				</div>
 				<div className="bottom">
 					<button onClick={toggle}>
 						<span>esconder</span>
@@ -117,13 +135,13 @@ export default function SearchBox(props) {
 					align-items: center;
 					border: none;
 					background-color: transparent;
-					color: #FAFAFA;
+					color: #fafafa;
 					cursor: pointer;
 					font-size: 1em;
 				}
 
 				.btn {
-					margin: 0px 0px 0px 10px;
+					margin: 0px 0px 0px 5px;
 				}
 
 				@media (min-width: 714px) {

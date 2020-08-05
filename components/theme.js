@@ -7,6 +7,7 @@ export default {
 		buttonColor: '#FFFFFF',
 		darkFontColor: '#333333',
 		lightFontColor: '#FAFAFA',
+		darkGreen: '#057F86'
 	},
 	constants: {
 		sectionPadding: '20px 20px 0px;',
