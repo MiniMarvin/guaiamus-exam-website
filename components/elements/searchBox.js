@@ -2,6 +2,7 @@ import { useState } from 'react'
 import theme from '../theme'
 import Selector from './selector'
 import Button from './button'
+import {useRouter} from 'next/router'
 
 export default function SearchBox(props) {
 	// TODO: query data from database
@@ -19,6 +20,12 @@ export default function SearchBox(props) {
 		'comodidade',
 		'agilidade',
 	])
+
+	const router = useRouter()
+
+	const navigate = () => {
+		router.push('/buscaExames')
+	}
 
 	return (
 		<>
@@ -49,7 +56,7 @@ export default function SearchBox(props) {
 							label="escolha o método de ordenação"
 						/>
             <div className="btn">
-						  <Button height="100%">buscar</Button>
+						  <Button height="100%" onClick={navigate}>buscar</Button>
             </div>
 					</div>
 				</div>

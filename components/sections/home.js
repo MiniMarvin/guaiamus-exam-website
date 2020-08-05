@@ -2,6 +2,7 @@ import SearchBox from '../elements/searchBox'
 import Link from 'next/link'
 import theme from '../theme'
 import Anchor from '../elements/anchor'
+import TopImage from '../elements/topImage'
 
 export default function Home() {
 	// TODO: solve the problem for the line
@@ -9,14 +10,7 @@ export default function Home() {
 		<>
 			<section>
 				<div className="info">
-					<div className="top">
-						<Link href="#">
-							<div className="logo">
-								<img src="/logo_guaiamus.svg" alt="logo guaiamus" />
-								<h1>Guaiamus</h1>
-							</div>
-						</Link>
-					</div>
+					<TopImage />
 					<div className="content">
 						<h1>agende seus exames em um clique</h1>
 						<p>
@@ -55,6 +49,7 @@ export default function Home() {
 				.content h1 {
 					margin: 40px 0px;
 				}
+				
 				p {
 					margin-bottom: 60px;
 				}
@@ -73,18 +68,8 @@ export default function Home() {
 					border: none;
 				}
 
-				.top img {
-					height: 3em;
-					margin: 0px 10px 0px 0px;
-				}
-
 				.home {
 					padding: 20px;
-					display: flex;
-					flex-direction: row;
-				}
-
-				.logo {
 					display: flex;
 					flex-direction: row;
 				}
