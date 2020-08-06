@@ -26,6 +26,8 @@ export default function SearchBox(props) {
 		'titulo 1',
 		'titulo 2',
 		'titulo 3',
+		'titulo 4',
+		'titulo 5',
 	])
 
 	const imageAsset = '/hide.svg'
@@ -77,7 +79,7 @@ export default function SearchBox(props) {
 					</div>
 				</div>
 				{/* TODO: insert here the selected and selectable items */}
-				<div class="selected-items">
+				<div className="selected-items">
 					{tags}
 				</div>
 				<div className="bottom">

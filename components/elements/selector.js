@@ -7,7 +7,7 @@ export default function Selector(props) {
 
 	return (
 		<>
-			<label for={props.name}>
+			<label>
 				<span>{props.label}</span>
 				<select
 					name={props.name}

@@ -4,7 +4,7 @@ export default function Tag(props) {
 	return (
 		<>
 			<div>
-				<div {...props} className="tag">
+				<div className="tag">
 					<span>{props.title}</span>
 					<img src="/close.svg" onClick={props.action} />
 				</div>
@@ -14,7 +14,7 @@ export default function Tag(props) {
 				{`
           div {
             display: inline-block;
-            margin: 0px 3px;
+            margin: 3px 3px 3px 0px;
           }
 
 					.tag {
