@@ -1,33 +1,6 @@
 import theme from '../theme'
 import Button from './button'
-
-function Row(props) {
-	return (
-		<>
-			<div>
-				<span>{props.title}:</span>
-				<span className="content">{props.content}</span>
-			</div>
-
-			<style jsx>{`
-				div {
-					display: flex;
-					flex-direction: row;
-          margin: 10px 0px;
-				}
-
-				span {
-					font-size: 1em;
-				}
-
-				.content {
-          margin-left: 5px;
-					color: ${theme.colors.baseGreen};
-				}
-			`}</style>
-		</>
-	)
-}
+import RowTitle from './RowTitle'
 
 export default function ClinicBox(props) {
 	const price = props.clinic.exams.reduce((acc, p) => acc + p.price, 0)
@@ -37,10 +10,10 @@ export default function ClinicBox(props) {
 			<div>
 				<h1>{props.clinic.name}</h1>
 				<h2>{props.clinic.subtitle}</h2>
-				<Row title="total" content={`R$ ${price}`} />
-				<Row title="tempo estimado" content={'02:00:00'} />
-				<Row title="local" content={props.clinic.local} />
-				<Row title="planos" content={props.clinic.plans} />
+				<RowTitle title="total" content={`R$ ${price}`} />
+				<RowTitle title="tempo estimado" content={'02:00:00'} />
+				<RowTitle title="local" content={props.clinic.local} />
+				<RowTitle title="planos" content={props.clinic.plans} />
 
 				<Button onClick={()=>{console.log('click no botão')}} width="100%">botão</Button>
 			</div>

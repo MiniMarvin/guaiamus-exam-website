@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start"
   },
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@remotelock/react-week-scheduler": "^3.5.8",
     "emotion-theming": "^10.0.27",
     "next": "9.5.1",
     "react": "16.13.1",
