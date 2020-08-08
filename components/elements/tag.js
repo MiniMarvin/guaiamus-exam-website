@@ -1,5 +1,9 @@
 import theme from '../theme'
 
+/**
+ * 
+ * @param {{title: string, action: Function}} props 
+ */
 export default function Tag(props) {
 	return (
 		<>
