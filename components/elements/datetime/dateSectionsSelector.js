@@ -17,74 +17,50 @@ moment.locale('pt-br')
 
 /**
  *
- * @param {{intervals: {date: Date, begin: Date, end: Date}[], setIntervals: Function}} props
+ * @param {{intervals: {date: moment.Moment, begin: moment.Moment, end: moment.Moment}[], setIntervals: Function}} props
  */
 function SelectTime(props) {
-	const dateDefault = new Date()
-	dateDefault.setHours(0, 0, 0, 0)
-
-	const beginDefault = new Date()
-	beginDefault.setHours(7, 0, 0, 0)
-
-	const endDefault = new Date()
-	endDefault.setHours(8, 0, 0, 0)
+	const dateDefault = moment().startOf('day')
+	const beginDefault = moment('07:00', 'hh:mm')
+	const endDefault = moment('08:00', 'hh:mm')
+	const minDate = moment().startOf('day')
+	const maxDate = moment().add(30, 'days')
 
 	const [date, setDate] = useState(dateDefault)
 	const [begin, setBegin] = useState(beginDefault)
 	const [end, setEnd] = useState(endDefault)
 
-	const minDate = new Date()
-	minDate.setHours(0, 0, 0, 0)
-
-	const maxDate = new Date()
-	maxDate.setDate(maxDate.getDate() + 30)
-
 	const save = () => {
-    console.log(props.intervals)
-    console.log(date)
-    console.log(begin)
-    console.log(end)
-
-    const x = moment().toDate()
-    const dt = new Date()
-
-		const intervals = props.intervals.filter(
-			(val) =>
-				!utils.isEqual(val.date, date) ||
-				!utils.isEqual(val.begin, begin) ||
-				!utils.isEqual(val.end, end),
+		const shouldAdd = props.intervals.reduce(
+			(acc, val) =>
+				acc &&
+				!(
+					utils.isEqual(val.date, date) &&
+					utils.isEqual(val.begin, begin) &&
+					utils.isEqual(val.end, end)
+				),
+			true,
 		)
-		props.intervals.forEach((val) => {
-      console.log(date, val.date)
-			console.log(
-				!utils.isEqual(val.date, date),
-				!utils.isEqual(val.begin, begin),
-				!utils.isEqual(val.end, end),
-			)
-		})
-
-		const newIntervals = [
-			...intervals,
-			{
-				date: date,
-				begin: begin,
-				end: end,
-			},
-		]
-		props.setIntervals(newIntervals)
-
-		// const dateDefault = new Date()
-		// dateDefault.setHours(0, 0, 0, 0)
-
-		// const beginDefault = new Date()
-		// beginDefault.setHours(7, 0, 0, 0, 0)
-
-		// const endDefault = new Date()
-		// endDefault.setHours(8, 0, 0, 0, 0)
-
-		// setDate(dateDefault)
-		// setBegin(beginDefault)
-		// setEnd(endDefault)
+    
+    if (shouldAdd) {
+      const newIntervals = [
+        ...props.intervals,
+        {
+          date: date,
+          begin: begin,
+          end: end,
+        },
+      ]
+      props.setIntervals(newIntervals)
+      
+      const dateDefault = moment().startOf('day')
+      const beginDefault = moment('07:00', 'hh:mm')
+      const endDefault = moment('08:00', 'hh:mm')
+      
+      setDate(dateDefault)
+      setBegin(beginDefault)
+      setEnd(endDefault)
+    }
 	}
 
 	return (
