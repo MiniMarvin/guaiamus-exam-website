@@ -15,6 +15,7 @@ export default function Tag(props) {
           div {
             display: inline-block;
             margin: 3px 3px 3px 0px;
+						color: white;
           }
 
 					.tag {

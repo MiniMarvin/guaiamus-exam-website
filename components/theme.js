@@ -1,3 +1,5 @@
+import { createMuiTheme } from '@material-ui/core/styles';
+
 export default {
 	colors: {
 		baseGreen: '#1CAAB4',
@@ -11,5 +13,15 @@ export default {
 	},
 	constants: {
 		sectionPadding: '20px 20px 0px;',
-	}
+	},
+	materialTheme: createMuiTheme({
+		palette: {
+			primary: {
+				main: '#1CAAB4',
+			},
+			secondary: {
+				main: '#057F86',
+			},
+		},
+	})
 }

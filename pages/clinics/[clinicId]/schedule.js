@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState } from 'react'
 
 import Link from 'next/link'
 
@@ -9,8 +9,7 @@ import Selector from '../../../components/elements/selector'
 import Button from '../../../components/elements/button'
 import Tag from '../../../components/elements/tag'
 
-import { TimeGridScheduler, classes } from '@remotelock/react-week-scheduler';
-import '@remotelock/react-week-scheduler/index.css';
+import DateSectionsSelector from '../../../components/elements/datetime/dateSectionsSelector'
 
 export default function ClinicExamDetails() {
 	const [exams, setExams] = useState([
@@ -52,12 +51,14 @@ export default function ClinicExamDetails() {
 	const tags = selectedItems.map((item, id) => (
 		<Tag
 			title={item}
-			key={id+'-tag'}
+			key={id + '-tag'}
 			action={() => {
 				console.log(`click ${item}`)
 			}}
 		/>
 	))
+
+	const [schedule, setSchedule] = useState([])
 
 	return (
 		<>
@@ -87,17 +88,17 @@ export default function ClinicExamDetails() {
 						</div>
 					</div>
 				</div>
-				<div className="selected-items">
-					{tags}
-				</div>
+				<div className="selected-items">{tags}</div>
 				<RowTitle title="total" content={`R$ ${price}`} />
 				<RowTitle title="tempo estimado" content={'02:00:00'} />
 				<RowTitle title="local" content={details.local} />
 				<RowTitle title="planos" content={details.plans.join(', ')} />
+				<DateSectionsSelector />
 			</div>
 
 			<style jsx>{`
-				.top, .content {
+				.top,
+				.content {
 					margin: 20px;
 					background-color: ${theme.colors.background};
 				}
