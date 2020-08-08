@@ -41,26 +41,26 @@ function SelectTime(props) {
 				),
 			true,
 		)
-    
-    if (shouldAdd) {
-      const newIntervals = [
-        ...props.intervals,
-        {
-          date: date,
-          begin: begin,
-          end: end,
-        },
-      ]
-      props.setIntervals(newIntervals)
-      
-      const dateDefault = moment().startOf('day')
-      const beginDefault = moment('07:00', 'hh:mm')
-      const endDefault = moment('08:00', 'hh:mm')
-      
-      setDate(dateDefault)
-      setBegin(beginDefault)
-      setEnd(endDefault)
-    }
+
+		if (shouldAdd) {
+			const newIntervals = [
+				...props.intervals,
+				{
+					date: date,
+					begin: begin,
+					end: end,
+				},
+			]
+			props.setIntervals(newIntervals)
+
+			const dateDefault = moment().startOf('day')
+			const beginDefault = moment('07:00', 'hh:mm')
+			const endDefault = moment('08:00', 'hh:mm')
+
+			setDate(dateDefault)
+			setBegin(beginDefault)
+			setEnd(endDefault)
+		}
 	}
 
 	return (
@@ -72,7 +72,8 @@ function SelectTime(props) {
 							value={date}
 							onChange={setDate}
 							minDate={minDate}
-							maxDate={maxDate}
+              maxDate={maxDate}
+              ampm={false}
 							label="data disponível"
 						/>
 					</div>
@@ -81,7 +82,8 @@ function SelectTime(props) {
 							value={begin}
 							onChange={setBegin}
 							minDate={minDate}
-							maxDate={maxDate}
+              maxDate={maxDate}
+              ampm={false}
 							label="a partir do horário"
 						/>
 					</div>
@@ -90,9 +92,9 @@ function SelectTime(props) {
 							value={end}
 							onChange={setEnd}
 							minDate={minDate}
-							maxDate={maxDate}
+              maxDate={maxDate}
+              ampm={false}
 							label="até o horário"
-							className="custom"
 						/>
 					</div>
 					<div>
