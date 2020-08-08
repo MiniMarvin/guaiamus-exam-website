@@ -72,8 +72,8 @@ function SelectTime(props) {
 							value={date}
 							onChange={setDate}
 							minDate={minDate}
-              maxDate={maxDate}
-              ampm={false}
+							maxDate={maxDate}
+							ampm={false}
 							label="data disponível"
 						/>
 					</div>
@@ -82,8 +82,8 @@ function SelectTime(props) {
 							value={begin}
 							onChange={setBegin}
 							minDate={minDate}
-              maxDate={maxDate}
-              ampm={false}
+							maxDate={maxDate}
+							ampm={false}
 							label="a partir do horário"
 						/>
 					</div>
@@ -92,8 +92,8 @@ function SelectTime(props) {
 							value={end}
 							onChange={setEnd}
 							minDate={minDate}
-              maxDate={maxDate}
-              ampm={false}
+							maxDate={maxDate}
+							ampm={false}
 							label="até o horário"
 						/>
 					</div>
@@ -125,7 +125,7 @@ function SelectTime(props) {
  */
 function SelectedTime(props) {
 	const removeInterval = (interval) => {
-		;() => {
+		return () => {
 			const newIntervals = props.intervals.filter(
 				(val) =>
 					!utils.isEqual(val.date, interval.date) ||
