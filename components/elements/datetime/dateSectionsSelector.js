@@ -5,15 +5,17 @@ import Button from '../button'
 import theme from '../../theme'
 
 import {
-	DatePicker,
+  DatePicker,
 	TimePicker,
 	MuiPickersUtilsProvider,
 } from '@material-ui/pickers'
 import MomentUtils from '@date-io/moment'
+import moment from 'moment'
+moment.locale('pt-br')
 
 function SelectTime() {
 	const beginDefault = new Date()
-	beginDefault.setHours(7, 0, 0, 0, 0)
+  beginDefault.setHours(7, 0, 0, 0, 0)
 
 	const endDefault = new Date()
 	endDefault.setHours(8, 0, 0, 0, 0)
@@ -42,7 +44,7 @@ function SelectTime() {
 						onChange={setDate}
 						minDate={minDate}
 						maxDate={maxDate}
-						label="data disponível"
+            label="data disponível"
 					/>
 				</div>
 				<div>
