@@ -162,13 +162,17 @@ function SelectedTime(props) {
 	)
 }
 
-export default function DateSectionsSelector() {
+export default function DateSectionsSelector(props) {
 	// {
 	//   date: new Date()
 	//   begin: new Date()
 	//   end: new Date()
 	// }
-	const [intervals, setIntervals] = useState([])
+	let [intervals, setIntervals] = useState([])
+	if (props.intervals && props.setIntervals) {
+		intervals = props.intervals
+		setIntervals = props.setIntervals
+	}
 
 	return (
 		<>

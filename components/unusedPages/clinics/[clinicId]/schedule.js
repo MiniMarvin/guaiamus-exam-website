@@ -90,10 +90,16 @@ export default function ClinicExamDetails() {
 				</div>
 				<div className="selected-items">{tags}</div>
 				<RowTitle title="total" content={`R$ ${price}`} />
-				<RowTitle title="tempo estimado" content={'02:00:00'} />
+				{/* <RowTitle title="tempo estimado" content={'02:00:00'} /> */}
 				<RowTitle title="local" content={details.local} />
 				<RowTitle title="planos" content={details.plans.join(', ')} />
-				<DateSectionsSelector />
+				<DateSectionsSelector intervals={schedule} setIntervals={setSchedule} />
+				{/* Insert your name */}
+				{/* Insert your email */}
+				{/* Insert your whatsapp */}
+				{/* Insert the payment method */}
+				{/* Insert the prefered location */}
+				{/* Insert the medical requirement */}
 			</div>
 
 			<style jsx>{`
