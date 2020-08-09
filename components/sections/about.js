@@ -6,32 +6,63 @@ export default function About() {
 	return (
 		<>
 			<section>
-				<TextBlock img='/exam-icon.svg' alt='ícone de exames'>
+				<TextBlock img="/exam-icon.svg" alt="ícone de exames">
 					<h2>Acompanhe sua saúde</h2>
-					<p>Guaimus é uma plataforma de saúde preventiva que lhe ajuda a marcar exames, acompanhar os seus resultados e compartilhar os resultados com médicos de sua confiança e manter eles em mãos para o futuro e agilizando os diagnósticos no futuro.</p>
-					<p>Você pode buscar por uma consulta no topo da página ou <Anchor>se inscreva</Anchor> para receber informações sobre exames e ficar atento a novidades como promoções que vão surgir na Guaiamus.</p>
+					<p>
+						Guaimus é uma plataforma de saúde preventiva que lhe ajuda
+						a marcar exames de forma simplificada e a acompanhar os
+						resultados, hoje nós estamos realizando os agendamentos e
+						a entrega dos resultados, mas estamos em negociação com
+						médicos e profissionais de saúde para entregar diretamente
+						para eles os resultados dos seus exames de forma mais
+						simples.
+					</p>
+					<p>
+						Você pode{' '}
+						<a
+							src="https://forms.gle/htHcD1bB6RsrNKDw8"
+							about="_blank"
+						>
+							buscar por uma consulta
+						</a>{' '}
+						ou <Anchor>se inscreva</Anchor> para receber informações
+						sobre exames, para que servem, quando fazer os periódicos,
+						quais os mais importantes e ficar atento a novidades sobre
+						como estamos mudando a saúde.
+					</p>
 				</TextBlock>
-				<TextBlock img='/money-icon.svg' alt='ícone de gastos'>
-					<h2>Reduza seu gasto</h2>
-					<p>Saúde preventiva é a forma mais barata de lidar com sua saúde, afinal é sempre melhor prevenir do que remediar.</p>
-					<p>Mas também sabemos que os tratamentos podem acabar sendo caros, e por isso ainda lhe damos uma vantagem, estamos construindo uma plataforma para fazer o governo pagar pela sua saúde! <Anchor>se inscrever</Anchor> aqui para saber quando essa parte da plataforma estiver pronta</p>
+				<TextBlock img="/time-icon.svg" alt="ícone de gastos">
+					<h2>Mais cômodo e ágil</h2>
+					<p>
+						Ir a uma consulta ou fazer um exame é sempre uma atividade
+						que causa ansiedade por demorar muito e ter muita espera,
+						por isso queremos resolver esse problema, estamos em
+						conversas com médicos, clínicas e laboratórios para que
+						ter que fazer uma consulta não seja um processo cansativo
+						problemático.
+					</p>
+					<p>
+						Se você deseja acompanhar o processo e saber mais de como
+						vamos facilitar o seu contato com a saúde!{' '}
+						<Anchor>se inscreva</Anchor> aqui e vamos te manter informado ou informada.
+					</p>
 				</TextBlock>
 			</section>
 
 			<style jsx>{`
-        section {
-          display: flex;
-          flex-direction: column;
-          margin-top: 40px;
-          padding: ${theme.constants.sectionPadding};
-        }
+				section {
+					display: flex;
+					flex-direction: column;
+					margin-top: 40px;
+					padding: ${theme.constants.sectionPadding};
+				}
 
-        @media (min-width: 714px) {
-          section {
-            flex-direction: row;
-          }
-        }
-      `}</style>
+				@media (min-width: 714px) {
+					section {
+						flex-direction: row;
+					}
+				}
+			`}</style>
 		</>
 	)
 }

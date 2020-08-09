@@ -1,6 +1,7 @@
 import theme from '../theme'
 import SocialMedia from '../elements/socialMedia'
 import Anchor from '../elements/anchor'
+import Link from 'next/link'
 
 export default function Footer() {
 	return (
@@ -20,8 +21,7 @@ export default function Footer() {
 						<h1>contato</h1>
 						<p>
 							@guaiamus em todas as redes <br />
-							ou contato por email:{' '}
-							contato@guaiamus.com
+							ou contato por email: contato@guaiamus.com
 						</p>
 						<SocialMedia email twitter instagram />
 					</div>
@@ -29,9 +29,11 @@ export default function Footer() {
 				<div className="privacy">
 					<h1>Política de privacidade</h1>
 					<p>
-						se você está interessado em ser nosso parceiro você pode
-						entrar em contato e nós podemos fazer um acordo para
-						aumentar seus exames e consultas!{' '}
+						Clique{' '}
+						<Link href="/privacy">
+							<Anchor>aqui</Anchor>
+						</Link>{' '}
+						para visualizar nossa política de privacidade
 					</p>
 				</div>
 			</section>

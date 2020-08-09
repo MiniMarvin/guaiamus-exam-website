@@ -3,6 +3,7 @@ import Link from 'next/link'
 import theme from '../theme'
 import Anchor from '../elements/anchor'
 import TopImage from '../elements/topImage'
+import Button from '../elements/button'
 
 export default function Home() {
 	// TODO: solve the problem for the line
@@ -14,12 +15,25 @@ export default function Home() {
 					<div className="content">
 						<h1>agende seus exames em um clique</h1>
 						<p>
-							<Anchor src="#">se inscreva</Anchor> para poder
-							acompanhar as novidades da guaiamus, notícias sobre
-							saúde e fazer exames gratuitos
+							Na Guaiamus você pode agendar um exame de forma
+							simplificada, basta dizer o exame que precisa fazer e
+							nós fazemos o agendamento por você
+						</p>
+						<Anchor
+							href="https://forms.gle/htHcD1bB6RsrNKDw8"
+							target="_blank"
+						>
+							<div className="btn">
+								<Button width="100%" height="48px">Agendar exame</Button>
+							</div>
+						</Anchor>
+						<p></p>
+						<p>
+							Ou <Anchor src="#">saiba mais</Anchor> de como funciona
+							o serviço da Guaiamus
 						</p>
 					</div>
-					<SearchBox />
+					{/* <SearchBox /> */}
 					<div className="bottomDiv"></div>
 				</div>
 				<div className="image">
@@ -49,7 +63,7 @@ export default function Home() {
 				.content h1 {
 					margin: 40px 0px;
 				}
-				
+
 				p {
 					margin-bottom: 60px;
 				}
