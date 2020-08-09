@@ -7,7 +7,7 @@ export default function HomePage() {
 	return (
 		<div>
 			<Head>
-				<title>Guaiamus | marque exames com um clique</title>
+				<title>Guaiamus | Agende seus exames</title>
 				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<Home />

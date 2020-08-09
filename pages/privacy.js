@@ -7,7 +7,7 @@ export default function Privacy() {
 	return (
 		<>
 			<Head>
-				<title>Guaiamus | marque exames com um clique</title>
+				<title>Política de privacidade</title>
 				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<div className="top">

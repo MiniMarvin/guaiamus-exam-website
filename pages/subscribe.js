@@ -4,6 +4,10 @@ import theme from '../components/theme'
 export default function Subscribe() {
 	return (
 		<>
+    <Head>
+				<title>Se inscreva na newsletter</title>
+				<link rel="icon" href="/favicon.png" />
+			</Head>
 			<div className="top">
 				<TopImage />
 			</div>
