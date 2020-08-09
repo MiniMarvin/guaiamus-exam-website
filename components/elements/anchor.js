@@ -1,9 +1,10 @@
+import React from 'react'
 import theme from '../theme'
 
-export default function Anchor(props) {
+const Anchor = React.forwardRef((props, ref) => {
 	return (
-		<a {...props}>
-      {props.children}
+		<a {...props} ref={ref}>
+			{props.children}
 			<style jsx>{`
       a {
 					/* color: ${theme.colors.linkColor}; */
@@ -15,4 +16,6 @@ export default function Anchor(props) {
 			`}</style>
 		</a>
 	)
-}
+})
+
+export default Anchor

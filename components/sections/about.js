@@ -2,6 +2,8 @@ import TextBlock from '../elements/textBlock'
 import theme from '../theme'
 import Anchor from '../elements/anchor'
 
+import Link from 'next/link'
+
 export default function About() {
 	return (
 		<>
@@ -25,7 +27,7 @@ export default function About() {
 						>
 							buscar por uma consulta
 						</a>{' '}
-						ou <Anchor>se inscreva</Anchor> para receber informações
+						ou <Link href="/subscribe"><Anchor>se inscreva</Anchor></Link>  para receber informações
 						sobre exames, para que servem, quando fazer os periódicos,
 						quais os mais importantes e ficar atento a novidades sobre
 						como estamos mudando a saúde.
@@ -44,7 +46,8 @@ export default function About() {
 					<p>
 						Se você deseja acompanhar o processo e saber mais de como
 						vamos facilitar o seu contato com a saúde!{' '}
-						<Anchor>se inscreva</Anchor> aqui e vamos te manter informado ou informada.
+						<Link href="/subscribe"><Anchor>se inscreva</Anchor></Link> aqui e vamos te manter
+						informado ou informada.
 					</p>
 				</TextBlock>
 			</section>

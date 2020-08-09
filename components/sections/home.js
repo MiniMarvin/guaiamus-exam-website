@@ -29,7 +29,7 @@ export default function Home() {
 						</Anchor>
 						<p></p>
 						<p>
-							Ou <Anchor src="#">saiba mais</Anchor> de como funciona
+							Ou <Link href="/subscribe"><Anchor>saiba mais</Anchor></Link> de como funciona
 							o serviço da Guaiamus
 						</p>
 					</div>
