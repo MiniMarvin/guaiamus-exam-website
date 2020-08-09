@@ -1,6 +1,8 @@
 import TopImage from '../components/elements/topImage'
 import theme from '../components/theme'
 
+import Head from 'next/head'
+
 export default function Subscribe() {
 	return (
 		<>
