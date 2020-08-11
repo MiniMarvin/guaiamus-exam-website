@@ -65,7 +65,6 @@ export default function Footer() {
 				.row {
 					display: flex;
 					flex-direction: row;
-					flex-basis: 0px;
 				}
 
 				.row div {
