@@ -24,13 +24,22 @@ export default function Home() {
 							target="_blank"
 						>
 							<div className="btn">
-								<Button width="100%" height="48px">Agendar exame</Button>
+								<Button width="100%" height="48px">
+									Agendar exame
+								</Button>
 							</div>
 						</Anchor>
 						<p></p>
 						<p>
-							Ou <Link href="/subscribe"><Anchor>saiba mais</Anchor></Link> de como funciona
-							o serviço da Guaiamus
+							Nós queremos descomplicar a sua relação com saúde, por
+							isso estamos facilitando seu acesso, logo você vai poder
+							passar menos tempo em uma clínica e acompanhar todos os
+							seus dados a partir do celular,{' '}
+							<Link href="/subscribe">
+								<Anchor>clique aqui</Anchor>
+							</Link>{' '}
+							para saber quando essas outras funcionalidades estarão
+							disponíveis.
 						</p>
 					</div>
 					{/* <SearchBox /> */}
