@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
 						})(window,document,'script','dataLayer','GTM-KZ535QV');`,
 					}}
 				></script>
-				...
+				<meta name="yandex-verification" content="d2fd13fbe7956449" />
 			</Head>
 			<div
 				dangerouslySetInnerHTML={{
